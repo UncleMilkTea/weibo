@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SearchView" customModule="weibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9V-ef-TGl">
+                    <rect key="frame" x="360" y="0.0" width="36" height="35"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickCancelButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="raQ-up-29e"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="听说下雨天音乐和辣条更配哦!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgs-ZQ-kzn" customClass="realTimeChange" customModule="weibo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="396" height="35"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="13"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="searchFiledBeginEdit:" destination="iN0-l3-epB" eventType="editingDidBegin" id="FWX-8V-Hih"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sgs-ZQ-kzn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Mxp-Hh-poW"/>
+                <constraint firstItem="sgs-ZQ-kzn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="d1S-2B-suJ"/>
+                <constraint firstItem="r9V-ef-TGl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="h7v-FG-nnJ"/>
+                <constraint firstAttribute="bottom" secondItem="sgs-ZQ-kzn" secondAttribute="bottom" id="nXM-L4-GkN"/>
+                <constraint firstAttribute="bottom" secondItem="r9V-ef-TGl" secondAttribute="bottom" id="pZo-dn-Lfb"/>
+                <constraint firstAttribute="trailing" secondItem="sgs-ZQ-kzn" secondAttribute="trailing" id="sfA-Gc-QVu"/>
+                <constraint firstAttribute="trailing" secondItem="r9V-ef-TGl" secondAttribute="trailing" id="vUv-D6-G02"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelBtn" destination="r9V-ef-TGl" id="Spu-Od-hmq"/>
+                <outlet property="rigthEdge" destination="sfA-Gc-QVu" id="hSg-od-75f"/>
+                <outlet property="searchFiled" destination="sgs-ZQ-kzn" id="Y0S-XT-1JF"/>
+            </connections>
+            <point key="canvasLocation" x="380" y="134.5"/>
+        </view>
+    </objects>
+</document>
